@@ -1,0 +1,57 @@
+<%= form_for(@post) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :carrera %><br />
+    <%= f.text_field :carrera %>
+  </div>
+  <div class="field">
+    <%= f.label :clase1 %><br />
+    <%= f.text_field :clase1 %>
+  </div>
+  <div class="field">
+    <%= f.label :clase2 %><br />
+    <%= f.text_field :clase2 %>
+  </div>
+  <div class="field">
+    <%= f.label :clase3 %><br />
+    <%= f.text_field :clase3 %>
+  </div>
+  <div class="field">
+    <%= f.label :clase4 %><br />
+    <%= f.text_field :clase4 %>
+  </div>
+  <div class="field">
+    <%= f.label :materia1 %><br />
+    <%= f.text_field :materia1 %>
+  </div>
+  <div class="field">
+    <%= f.label :materia2 %><br />
+    <%= f.text_field :materia2 %>
+  </div>
+  <div class="field">
+    <%= f.label :materia3 %><br />
+    <%= f.text_field :materia3 %>
+  </div>
+  <div class="field">
+    <%= f.label :materia4 %><br />
+    <%= f.text_field :materia4 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
